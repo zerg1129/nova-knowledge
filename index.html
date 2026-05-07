@@ -4,11 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>一篇看懂橡木桶如何改變威士忌｜Nova Whisky Bar 新星威士忌酒館</title>
-  <meta name="description" content="由高雄 Nova Whisky Bar 新星威士忌酒館整理：從美洲橡木、歐洲橡木、風乾、烘烤到桶型風味，帶你看懂威士忌為什麼會有香草、椰子、焦糖、雪松與辛香料。" />
+  <meta name="description" content="聽完 Drin Drin Tipsy 最新一集聊橡木桶後，Nova Whisky Bar 將美洲橡木、歐洲橡木、風乾、烘烤與杯中風味整理成新手友善的威士忌入門指南。" />
+  <meta name="author" content="Nova Whisky Bar 新星威士忌酒館" />
   <meta property="og:title" content="一篇看懂橡木桶如何改變威士忌｜Nova Whisky Bar" />
-  <meta property="og:description" content="為什麼威士忌會有香草、椰子、焦糖、雪松與辛香料？很多答案，都藏在橡木桶裡。" />
-  <meta property="og:type" content="website" />
+  <meta property="og:description" content="從 Drin Drin Tipsy 橡木桶主題集數延伸整理：看懂香草、椰子、焦糖與辛香料如何出現在杯中的威士忌入門指南。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="Nova Whisky Bar 新星威士忌酒館" />
+  <meta name="twitter:card" content="summary" />
   <meta name="theme-color" content="#11151c" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BarOrPub",
+          "@id": "#nova-whisky-bar",
+          "name": "Nova Whisky Bar 新星威士忌酒館",
+          "telephone": "+886-7-330-8050",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "苓雅區林森二路128巷14號 2樓",
+            "addressLocality": "高雄市",
+            "addressCountry": "TW"
+          },
+          "servesCuisine": "Whisky Bar",
+          "url": "./index.html"
+        },
+        {
+          "@type": "Article",
+          "@id": "#oak-cask-guide",
+          "headline": "一篇看懂橡木桶如何改變威士忌",
+          "description": "從 Drin Drin Tipsy 橡木桶主題集數延伸整理的威士忌橡木桶入門指南。",
+          "inLanguage": "zh-Hant-TW",
+          "author": { "@id": "#nova-whisky-bar" },
+          "publisher": { "@id": "#nova-whisky-bar" },
+          "about": ["威士忌", "橡木桶", "美洲橡木", "歐洲橡木"],
+          "citation": "https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9"
+        }
+      ]
+    }
+  </script>
   <style>
     :root {
       --bg: #11151c;
@@ -48,6 +84,12 @@
     }
 
     a { color: inherit; }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(244, 183, 198, 0.9);
+      outline-offset: 3px;
+    }
 
     .progress {
       position: fixed;
@@ -91,6 +133,10 @@
       padding: 24px;
     }
 
+    .age-gate.is-hidden {
+      display: none !important;
+    }
+
     .age-card {
       width: min(560px, 100%);
       border: 1px solid var(--line);
@@ -109,6 +155,11 @@
     }
 
     .age-card p { color: #465651; margin: 0 0 18px; }
+
+    .age-kicker {
+      color: #4b7f6b;
+      margin-bottom: 12px;
+    }
 
     .age-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 
@@ -131,6 +182,7 @@
 
     .btn-primary { background: var(--ink); color: var(--paper); }
     .btn-outline { border-color: rgba(28,37,38,.24); color: var(--ink); background: transparent; }
+    .btn-light { border-color: rgba(247,243,234,.35); color: var(--paper); background: transparent; }
     .btn-gold { background: linear-gradient(135deg, var(--gold-2), #b7d7ea 58%, var(--gold)); color: #11151c; }
 
     .topbar {
@@ -233,6 +285,15 @@
       font-size: clamp(1.05rem, 2vw, 1.35rem);
       max-width: 780px;
     }
+
+    .hero-lead a {
+      color: var(--paper);
+      text-decoration-color: rgba(244,183,198,.72);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .hero-lead a:hover { color: var(--gold-2); }
 
     .hero-actions {
       display: flex;
@@ -511,6 +572,12 @@
       border-color: var(--ink);
     }
 
+    .finder-buttons button[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
     .finder-output {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -721,6 +788,15 @@
 
     .note-band p { color: rgba(247,243,234,.78); margin: 0; }
 
+    .mt-18 { margin-top: 18px; }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
     .sources {
       background: rgba(0,0,0,.18);
       border: 1px solid var(--cream-line);
@@ -736,6 +812,8 @@
     }
 
     .sources a { color: var(--gold-2); word-break: break-word; }
+
+    .source-title { font-size: 2rem; }
 
     .footer {
       margin-top: 80px;
@@ -794,7 +872,15 @@
       .hero, .feature, .grid-2, .footer-grid { grid-template-columns: 1fr; }
       .grid-3, .meta-strip, .toc-grid, .chem-grid, .memory-grid, .path-strip { grid-template-columns: 1fr; }
       .nav { align-items: flex-start; flex-direction: column; padding: 12px 0; }
-      .nav-links { justify-content: flex-start; }
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
+      }
+      .nav-links a { flex: 0 0 auto; }
       .section-head { display: block; }
       .section-note { margin-top: 12px; }
       .finder-output { grid-template-columns: 1fr; }
@@ -813,6 +899,16 @@
       .legal-strip { font-size: .84rem; }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
     @media print {
       .topbar, .legal-strip, .age-gate, .hero-actions, .finder-buttons { display: none !important; }
       body { background: #fff; color: #000; padding-bottom: 0; }
@@ -826,7 +922,7 @@
 
   <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
     <div class="age-card">
-      <p class="eyebrow" style="color:#4b7f6b;margin-bottom:12px;">Nova Whisky Bar Knowledge</p>
+      <p class="eyebrow age-kicker">Nova Whisky Bar Knowledge</p>
       <h2 id="ageTitle">請確認你已滿十八歲</h2>
       <p>本頁包含威士忌與酒類熟成知識，並提供酒吧資訊。未滿十八歲請勿飲酒，也請勿瀏覽酒類宣傳內容。</p>
       <div class="age-actions">
@@ -859,7 +955,7 @@
       <div class="hero-copy">
         <span class="eyebrow">Oak Cask Guide</span>
         <h1>為什麼威士忌會有香草、椰子、焦糖味？</h1>
-        <p class="hero-lead">很多答案，都藏在橡木桶裡。這是一份由 Nova Whisky Bar 整理給威士忌新手與好奇者的橡木桶入門指南：從美洲橡木、歐洲橡木、風乾、烘烤，到杯中風味一次看懂。</p>
+        <p class="hero-lead">聽完 <a href="https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9" target="_blank" rel="noopener">Drin Drin Tipsy 最新一集聊橡木桶</a>，我們也想把這些知識整理成一份更容易吸收的版本。這份指南寫給威士忌新手與好奇者：從美洲橡木、歐洲橡木、風乾、烘烤，到杯中的香草、椰子、焦糖與辛香料，讓你下次喝威士忌時，多一些能辨認風味的線索。</p>
         <div class="hero-tags" aria-label="本頁重點">
           <span class="hero-tag">新手友善</span>
           <span class="hero-tag">30 秒重點</span>
@@ -868,7 +964,8 @@
         </div>
         <div class="hero-actions">
           <a class="btn btn-gold" href="#quick">先看 30 秒版本</a>
-          <a class="btn btn-outline" style="color:var(--paper);border-color:rgba(247,243,234,.35);" href="#visit">查看酒吧資訊</a>
+          <a class="btn btn-light" href="#visit">查看酒吧資訊</a>
+          <a class="btn btn-light" href="https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9" target="_blank" rel="noopener">收聽這集節目</a>
         </div>
       </div>
       <aside class="hero-card" aria-label="Nova Whisky Bar 店家資訊">
@@ -879,7 +976,7 @@
         </div>
         <div class="info-list">
           <div class="info-item"><span>店名</span><strong>Nova Whisky Bar 新星威士忌酒館</strong></div>
-          <div class="info-item"><span>地址</span><strong>高雄市苓雅區林森二路128巷14號 2樓</strong></div>
+          <div class="info-item"><span>地址</span><strong><a href="https://www.google.com/maps/search/?api=1&query=Nova%20Whisky%20Bar%20%E6%96%B0%E6%98%9F%E5%A8%81%E5%A3%AB%E5%BF%8C%E9%85%92%E9%A4%A8%20%E9%AB%98%E9%9B%84%E5%B8%82%E8%8B%93%E9%9B%85%E5%8D%80%E6%9E%97%E6%A3%AE%E4%BA%8C%E8%B7%AF128%E5%B7%B714%E8%99%9F2%E6%A8%93" target="_blank" rel="noopener">高雄市苓雅區林森二路128巷14號 2樓</a></strong></div>
           <div class="info-item"><span>電話</span><strong><a href="tel:+88673308050">(07) 330-8050</a></strong></div>
           <div class="info-item"><span>營業時間</span><strong>週日至週五 20:00–01:30<br>週六 20:00–02:00</strong></div>
         </div>
@@ -901,7 +998,7 @@
         <p class="section-note">這份指南以清楚目錄、快速結論與品飲現場可用的記憶卡為骨架，讓新手可以先抓重點，有興趣的人再慢慢深入。</p>
       </div>
       <div class="meta-strip" aria-label="文件基本資訊">
-        <div class="meta-item"><span>素材來源</span><strong>Drin Drin Tipsy EP207 × 公開資料交叉整理</strong></div>
+        <div class="meta-item"><span>素材來源</span><strong><a href="https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9" target="_blank" rel="noopener">Drin Drin Tipsy EP207</a> × 公開資料交叉整理</strong></div>
         <div class="meta-item"><span>用途</span><strong>新手入門｜品酒教育｜Nova Whisky Bar 來店前閱讀</strong></div>
         <div class="meta-item"><span>閱讀方式</span><strong>先看 30 秒版本，再依興趣深入橡木桶機制</strong></div>
       </div>
@@ -954,12 +1051,12 @@
       <div class="flavor-finder">
         <h3>風味快速查詢</h3>
         <div class="finder-buttons" aria-label="風味查詢按鈕">
-          <button class="active" data-flavor="vanilla">香草</button>
-          <button data-flavor="coconut">椰子</button>
-          <button data-flavor="caramel">焦糖／蜂蜜</button>
-          <button data-flavor="spice">辛香料</button>
-          <button data-flavor="smoke">咖啡／煙燻</button>
-          <button data-flavor="tannin">乾澀／茶感</button>
+          <button class="active" type="button" data-flavor="vanilla" aria-pressed="true">香草</button>
+          <button type="button" data-flavor="coconut" aria-pressed="false">椰子</button>
+          <button type="button" data-flavor="caramel" aria-pressed="false">焦糖／蜂蜜</button>
+          <button type="button" data-flavor="spice" aria-pressed="false">辛香料</button>
+          <button type="button" data-flavor="smoke" aria-pressed="false">咖啡／煙燻</button>
+          <button type="button" data-flavor="tannin" aria-pressed="false">乾澀／茶感</button>
         </div>
         <div class="finder-output" id="finderOutput">
           <div class="output-box"><strong>常見來源</strong><p id="sourceText">橡木中的木質素受熱轉化後，會產生與香草氣息相關的香草醛。</p></div>
@@ -1044,18 +1141,18 @@
         </div>
       </div>
 
-      <div class="grid-2" style="margin-top:18px;">
+      <div class="grid-2 mt-18">
         <article class="card light">
           <h3>Tyloses：白橡木防漏的關鍵</h3>
           <p>Tyloses 可以理解成木材導管裡自然形成的阻塞結構。美洲白橡木的 tyloses 較發達，因此液密性好，也讓製桶時能有較高的木材利用率。</p>
         </article>
         <article class="card light">
-          <h3>不要說成「任意方向裁切」</h3>
-          <p>比較精準的說法是：美洲白橡木較能接受鋸切；歐洲橡木通常更需要順著木紋劈裂，以降低滲漏風險。這也是兩者成本與製桶方式差異的一部分。</p>
+          <h3>木紋會影響製桶方式</h3>
+          <p>美洲白橡木的導管結構較容易保持液密，因此桶板可以用較有效率的方式鋸切；歐洲橡木通常更講究順著木紋劈裂，才能降低熟成時滲漏的風險。這也是不同橡木在成本、工法與風味表現上會出現差異的原因之一。</p>
         </article>
       </div>
 
-      <div class="feature" style="margin-top:18px;">
+      <div class="feature mt-18">
         <div class="big-number">02</div>
         <div>
           <h3>Seasoning：風乾不是單純曬乾</h3>
@@ -1063,7 +1160,7 @@
         </div>
       </div>
 
-      <div class="grid-3" style="margin-top:18px;">
+      <div class="grid-3 mt-18">
         <article class="card">
           <h3>物理作用</h3>
           <p>雨水能沖洗部分可溶性成分，氧氣與陽光則推動氧化與分解，降低新木材過度尖銳的木質感。</p>
@@ -1078,7 +1175,7 @@
         </article>
       </div>
 
-      <div class="feature" style="margin-top:18px;">
+      <div class="feature mt-18">
         <div class="big-number">03</div>
         <div>
           <h3>Toasting 與 Charring：烘烤和炭化不一樣</h3>
@@ -1086,7 +1183,7 @@
         </div>
       </div>
 
-      <table class="compare" style="margin-top:18px;" aria-label="烘烤程度與風味對照表">
+      <table class="compare mt-18" aria-label="烘烤程度與風味對照表">
         <thead>
           <tr>
             <th>程度</th>
@@ -1113,7 +1210,7 @@
         </tbody>
       </table>
 
-      <table class="compare" style="margin-top:18px;" aria-label="美洲橡木與法國橡木不同烘烤程度風味對照表">
+      <table class="compare mt-18" aria-label="美洲橡木與法國橡木不同烘烤程度風味對照表">
         <thead>
           <tr>
             <th>橡木種類</th>
@@ -1139,7 +1236,7 @@
       </table>
       <div class="note-band"><p><strong>品飲備註：</strong>「提拉米蘇、焦糖烤布蕾、抹茶」這類詞更適合視為感官聯想，而不是固定的科學分類。公開頁面保留這種畫面感，但用「可能聯想到」的方式呈現會更穩。</p></div>
 
-      <div class="feature" style="margin-top:18px;">
+      <div class="feature mt-18">
         <div class="big-number">04</div>
         <div>
           <h3>橡木桶的風味化學</h3>
@@ -1161,7 +1258,7 @@
         </article>
       </div>
 
-      <div class="grid-2" style="margin-top:18px;">
+      <div class="grid-2 mt-18">
         <article class="card light">
           <h3>不能只用顏色判斷桶型</h3>
           <p>酒色受橡木種類、桶齡、前裝酒、熟成時間、酒精度、倉庫環境與是否添加焦糖色素等因素影響。同樣是美洲橡木，也可能因長時間熟成或雪莉 seasoned cask 而顏色很深。</p>
@@ -1207,6 +1304,10 @@
         <article class="card light">
           <h3>可以怎麼喝？</h3>
           <p>你可以直接告訴我們你喜歡的味道，例如香草、椰子、煙燻、巧克力、果乾、辛香料；也可以說「我想喝懂橡木桶差異」，我們會依照現場酒款協助安排適合的方向。</p>
+          <div class="contact-actions" aria-label="來店行動">
+            <a class="btn btn-primary" href="tel:+88673308050">打電話詢問</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Nova%20Whisky%20Bar%20%E6%96%B0%E6%98%9F%E5%A8%81%E5%A3%AB%E5%BF%8C%E9%85%92%E9%A4%A8%20%E9%AB%98%E9%9B%84%E5%B8%82%E8%8B%93%E9%9B%85%E5%8D%80%E6%9E%97%E6%A3%AE%E4%BA%8C%E8%B7%AF128%E5%B7%B714%E8%99%9F2%E6%A8%93" target="_blank" rel="noopener">Google Maps 導航</a>
+          </div>
         </article>
       </div>
     </section>
@@ -1214,9 +1315,10 @@
     <section class="container">
       <div class="sources">
         <span class="kicker">Sources & Notes</span>
-        <h2 style="font-size:2rem;">主要參考資料</h2>
+        <h2 class="source-title">主要參考資料</h2>
         <p class="small">本頁以 Drin Drin Tipsy EP207 的橡木桶主題內容為起點，並參考以下公開資料交叉整理。橡木桶風味描述為常見傾向，實際風味會因酒款、桶型、熟成條件與品飲情境而異。</p>
         <ol>
+          <li>Drin Drin Tipsy — EP207 橡木桶主題集數: <a href="https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9" target="_blank" rel="noopener">https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9</a></li>
           <li>National Treasury Administration, Ministry of Finance — alcohol warning label information: <a href="https://www.nta.gov.tw/Eng/singlehtml/2736" target="_blank" rel="noopener">https://www.nta.gov.tw/Eng/singlehtml/2736</a></li>
           <li>Scotch Whisky Association — Guidance on allowable casks for maturation: <a href="https://www.scotch-whisky.org.uk/media/2386/guidance-on-allowable-casks-for-maturation_2025-1.pdf" target="_blank" rel="noopener">https://www.scotch-whisky.org.uk/media/2386/guidance-on-allowable-casks-for-maturation_2025-1.pdf</a></li>
           <li>TTB — American Single Malt Whisky standard: <a href="https://www.ttb.gov/public-information/featured-stories/ttb-establishes-american-single-malt-whisky-standard-identity" target="_blank" rel="noopener">https://www.ttb.gov/public-information/featured-stories/ttb-establishes-american-single-malt-whisky-standard-identity</a></li>
@@ -1237,7 +1339,7 @@
         <p>一間位於高雄的威士忌酒吧。希望把威士忌變得更生活化，也更容易被理解。</p>
       </div>
       <div>
-        <p><strong>地址</strong><br>高雄市苓雅區林森二路128巷14號 2樓</p>
+        <p><strong>地址</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Nova%20Whisky%20Bar%20%E6%96%B0%E6%98%9F%E5%A8%81%E5%A3%AB%E5%BF%8C%E9%85%92%E9%A4%A8%20%E9%AB%98%E9%9B%84%E5%B8%82%E8%8B%93%E9%9B%85%E5%8D%80%E6%9E%97%E6%A3%AE%E4%BA%8C%E8%B7%AF128%E5%B7%B714%E8%99%9F2%E6%A8%93" target="_blank" rel="noopener">高雄市苓雅區林森二路128巷14號 2樓</a></p>
         <p><strong>電話</strong><br><a href="tel:+88673308050">(07) 330-8050</a></p>
         <p><strong>營業時間</strong><br>週日至週五 20:00–01:30<br>週六 20:00–02:00</p>
       </div>
@@ -1251,15 +1353,59 @@
   <script>
     const ageGate = document.getElementById('ageGate');
     const enterSite = document.getElementById('enterSite');
-    const ageConfirmed = localStorage.getItem('novaOakAgeConfirmed');
+    const leaveSite = ageGate.querySelector('a');
+    const focusableAgeControls = [enterSite, leaveSite];
+
+    const storage = {
+      get(key) {
+        try {
+          return localStorage.getItem(key);
+        } catch (error) {
+          return null;
+        }
+      },
+      set(key, value) {
+        try {
+          localStorage.setItem(key, value);
+        } catch (error) {
+          return false;
+        }
+        return true;
+      }
+    };
+
+    const ageConfirmed = storage.get('novaOakAgeConfirmed');
+
+    const hideAgeGate = () => {
+      ageGate.hidden = true;
+      ageGate.classList.add('is-hidden');
+      ageGate.setAttribute('aria-hidden', 'true');
+    };
 
     if (ageConfirmed === 'true') {
-      ageGate.style.display = 'none';
+      hideAgeGate();
+    } else {
+      enterSite.focus();
     }
 
     enterSite.addEventListener('click', () => {
-      localStorage.setItem('novaOakAgeConfirmed', 'true');
-      ageGate.style.display = 'none';
+      storage.set('novaOakAgeConfirmed', 'true');
+      hideAgeGate();
+    });
+
+    ageGate.addEventListener('keydown', (event) => {
+      if (event.key !== 'Tab' || ageGate.hidden) return;
+
+      const firstControl = focusableAgeControls[0];
+      const lastControl = focusableAgeControls[focusableAgeControls.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstControl) {
+        event.preventDefault();
+        lastControl.focus();
+      } else if (!event.shiftKey && document.activeElement === lastControl) {
+        event.preventDefault();
+        firstControl.focus();
+      }
     });
 
     const flavorData = {
@@ -1301,14 +1447,23 @@
     const tipText = document.getElementById('tipText');
     const readProgress = document.getElementById('readProgress');
 
+    const setActiveFlavor = (button) => {
+      buttons.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      button.classList.add('active');
+      button.setAttribute('aria-pressed', 'true');
+
+      const item = flavorData[button.dataset.flavor];
+      sourceText.textContent = item.source;
+      contextText.textContent = item.context;
+      tipText.textContent = item.tip;
+    };
+
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
-        buttons.forEach((b) => b.classList.remove('active'));
-        button.classList.add('active');
-        const item = flavorData[button.dataset.flavor];
-        sourceText.textContent = item.source;
-        contextText.textContent = item.context;
-        tipText.textContent = item.tip;
+        setActiveFlavor(button);
       });
     });
 
