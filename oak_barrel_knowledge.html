@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>橡木桶知識文件｜Nova Whisky Bar</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --ink-soft: #3d3028;
+    --ink-muted: #7a6a5a;
+    --ink-faint: #b5a898;
+    --paper: #f7f3ee;
+    --paper-warm: #efe8de;
+    --paper-card: #faf7f3;
+    --amber: #c4863a;
+    --amber-light: #e8b878;
+    --amber-faint: #f5e8d0;
+    --teal: #2d6b6b;
+    --teal-light: #4a9090;
+    --rule: #d4c8b8;
+    --serif: 'Playfair Display', 'Noto Serif TC', serif;
+    --sans: 'Noto Sans TC', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* ── Cover ── */
+  .cover {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 80px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: var(--amber);
+    opacity: 0.08;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 40%;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: var(--amber-light);
+    opacity: 0.06;
+  }
+  .cover-label {
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--amber-light);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: var(--paper);
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: var(--amber-light);
+  }
+  .cover-sub {
+    font-size: 14px;
+    color: var(--ink-faint);
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--ink-faint);
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .cover-meta span { letter-spacing: 0.5px; }
+  .cover-meta strong { color: var(--amber-light); font-weight: 500; }
+
+  /* ── TOC ── */
+  .toc {
+    background: var(--paper-card);
+    border-left: 3px solid var(--amber);
+    padding: 40px 60px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .toc h2 {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+  }
+  .toc ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px 32px;
+  }
+  .toc li { counter-increment: toc; }
+  .toc a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 4px 0;
+    border-bottom: 1px dashed transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .toc a:hover { color: var(--amber); border-color: var(--amber-light); }
+  .toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-size: 11px;
+    color: var(--amber);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  /* ── Main Layout ── */
+  .body-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ── Section ── */
+  section {
+    padding: 56px 0 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 48px;
+  }
+  section:first-of-type { border-top: none; }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .section-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--amber);
+    padding-top: 6px;
+    flex-shrink: 0;
+    min-width: 32px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    margin: 32px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 24px 0 8px;
+  }
+  p { margin-bottom: 14px; color: var(--ink-soft); }
+  strong { font-weight: 500; color: var(--ink); }
+
+  /* ── Callout ── */
+  .callout {
+    background: var(--amber-faint);
+    border-left: 3px solid var(--amber);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .callout p { color: var(--ink-soft); margin: 0; font-size: 14px; }
+
+  .callout.teal {
+    background: #e8f2f2;
+    border-color: var(--teal);
+  }
+  .callout.teal .callout-label { color: var(--teal); }
+
+  /* ── Comparison Table ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .compare-card {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .compare-card-head {
+    padding: 12px 18px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .compare-card-head.us {
+    background: var(--amber);
+    color: white;
+  }
+  .compare-card-head.eu {
+    background: var(--teal);
+    color: white;
+  }
+  .compare-card-body { padding: 16px 18px; }
+  .compare-card-body ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .compare-card-body li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding-left: 14px;
+    position: relative;
+  }
+  .compare-card-body li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--ink-faint);
+    font-size: 12px;
+  }
+
+  /* ── Toast Table ── */
+  .toast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .toast-table th {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .toast-table th:first-child { width: 100px; }
+  .toast-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink-soft);
+    vertical-align: top;
+  }
+  .toast-table tr:last-child td { border-bottom: none; }
+  .toast-table tr:nth-child(even) td { background: var(--paper-card); }
+  .toast-label {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .toast-light { background: #fff8e8; color: #c4863a; border: 1px solid #e8d4a0; }
+  .toast-medium { background: #ffecd4; color: #a0621c; border: 1px solid #ddb080; }
+  .toast-heavy { background: #3d1a00; color: #ffcc88; border: 1px solid #6b3010; }
+
+  /* ── Science Block ── */
+  .science-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .science-row:last-child { border-bottom: none; }
+  .science-icon {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .science-icon.rain { background: #e8f2ff; }
+  .science-icon.fungi { background: #eef7e8; }
+  .science-icon.micro { background: #f8eeff; }
+  .science-label { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .science-desc { font-size: 14px; color: var(--ink-soft); }
+
+  /* ── Fact Tag ── */
+  .fact-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .fact-tag {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .fact-tag strong { color: var(--amber); }
+
+  /* ── Source ── */
+  .source-note {
+    font-size: 12px;
+    color: var(--ink-faint);
+    padding: 8px 12px;
+    border-left: 2px solid var(--rule);
+    margin-top: 16px;
+    font-style: italic;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--ink);
+    color: var(--ink-faint);
+    padding: 40px 60px;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 80px;
+  }
+  footer strong { color: var(--amber-light); font-weight: 500; }
+  footer .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    .cover { padding: 48px 24px 40px; }
+    .toc { padding: 32px 24px; }
+    .body-wrap { padding: 0 24px 60px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    footer { padding: 32px 24px; }
+    footer .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <div class="cover-label">Nova Whisky Bar 知識文件 ｜ Oak Cask Series</div>
+  <h1>橡木桶完全指南<br><em>The Oak Barrel</em></h1>
+  <div class="cover-sub">歐洲 vs 美洲 ／ Tylosis ／ 烘烤程度 ／ 風乾工藝 ／ 化學風味機制</div>
+  <div class="cover-meta">
+    <span><strong>素材來源</strong>　Drin Drin Tipsy EP207 × 學術文獻交叉驗證</span>
+    <span><strong>整理日期</strong>　2025年5月</span>
+    <span><strong>用途</strong>　品酒教育 ／ 社群素材 ／ 內部參考</span>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <h2>目錄</h2>
+  <ol>
+    <li><a href="#sec1">為什麼只用白橡木</a></li>
+    <li><a href="#sec2">Tylosis：美洲橡木的秘密武器</a></li>
+    <li><a href="#sec3">歐洲 vs 美洲：風味根本差異</a></li>
+    <li><a href="#sec4">烘烤程度與風味對照表</a></li>
+    <li><a href="#sec5">風乾工藝（Seasoning）</a></li>
+    <li><a href="#sec6">桶內化學：三大反應機制</a></li>
+    <li><a href="#sec7">橡木的風土——產地也有差</a></li>
+    <li><a href="#sec8">快速記憶卡</a></li>
+  </ol>
+</div>
+
+<div class="body-wrap">
+
+  <!-- Section 1 -->
+  <section id="sec1">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <h2>為什麼只用白橡木？</h2>
+    </div>
+    <p>全世界約有 250 種橡木，但能做熟成桶的幾乎只有<strong>白橡木（White Oak）</strong>這個分支。紅橡木雖然常見，因為沒有 Tylosis 結構（見第二節），製成的桶子會大量滲漏，通常只用於家具製作。</p>
+    <p>白橡木主要分兩大體系：美洲白橡木（<em>Quercus alba</em>）與歐洲白橡木（<em>Quercus robur</em> 和 <em>Quercus petraea</em>）。不論哪一支威士忌或葡萄酒，所使用的橡木桶幾乎可以確定是這兩者之一，或兩者的搭配。</p>
+
+    <div class="callout">
+      <div class="callout-label">關鍵結論</div>
+      <p>「美洲橡木桶」或「歐洲橡木桶」說的都是白橡木的不同品種，而非顏色。紅橡木不適用於熟成桶。</p>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="sec2">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <h2>Tylosis：美洲橡木的秘密武器</h2>
+    </div>
+    <p><strong>Tylosis（管系／侵填體）</strong>是美洲白橡木在導管內自然生長的特殊細胞結構。在美洲較為濕熱的氣候下，樹木演化出這套機制來控制水分輸送、防止水分流失。</p>
+
+    <div class="callout teal">
+      <div class="callout-label">科學背書</div>
+      <p>2024 年《Scientific Reports》研究以 X 光電腦斷層掃描確認：美洲白橡木導管中的 Tylosis 填充量是北方紅橡木的七倍，這正是白橡木桶能夠保住液體的關鍵。（Beam Suntory 贊助研究）</p>
+    </div>
+
+    <h3>Tylosis 對製桶的三個優點</h3>
+    <div class="fact-tags">
+      <div class="fact-tag"><strong>防漏</strong>　導管被填滿，液體無法穿透木材流失</div>
+      <div class="fact-tag"><strong>切割自由</strong>　因為各方向都不漏，木板可以任意方向裁切，廢料極少</div>
+      <div class="fact-tag"><strong>成本較低</strong>　高出材率讓美洲橡木桶售價大幅低於法國橡木桶</div>
+    </div>
+
+    <p>相對地，<strong>歐洲橡木</strong>沒有 Tylosis，製桶時必須嚴格沿著木材的天然紋理劈開（而非鋸切），才能確保木板密合不漏，因此每棵樹的廢料比例遠高於美洲橡木，成本也相應偏高。</p>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="sec3">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <h2>歐洲 vs 美洲：風味根本差異</h2>
+    </div>
+    <p>兩種橡木的化學組成差異，直接決定了酒液的風味走向。</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-card-head us">美洲白橡木 Quercus alba</div>
+        <div class="compare-card-body">
+          <ul>
+            <li>單寧含量低（約 1%）</li>
+            <li>Lactone（內酯）含量高 → 椰子、奶油感</li>
+            <li>Vanillin（香草醛）含量豐富</li>
+            <li>整體偏<strong>甜、圓潤、奶感</strong></li>
+            <li>密度較高，萃取速度慢</li>
+            <li>顏色上色較慢，但放久一樣可以非常深</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-card-head eu">歐洲橡木 Quercus robur</div>
+        <div class="compare-card-body">
+          <ul>
+            <li>單寧含量高（約 8–10%）</li>
+            <li>Lactone 含量較低</li>
+            <li>酚類化合物更豐富</li>
+            <li>整體偏<strong>乾、澀、辛香複雜</strong></li>
+            <li>密度較低，萃取速度快，更快為酒上色</li>
+            <li>紋理緊密，製桶廢料多</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="source-note">數據來源：Independent Stave Company、Scientific American、Really Good Whisky Company 學術彙整</div>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="sec4">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <h2>烘烤程度與風味對照表</h2>
+    </div>
+    <p>橡木桶在組裝完成後，內壁會經過<strong>烘烤（Toasting）</strong>或<strong>炭化（Charring）</strong>，熱能分解木材內的木質素、半纖維素等成分，釋放出不同層次的芳香物質。烘烤程度越深，風味越濃烈、越往烘焙/煙燻方向走。</p>
+
+    <h3>美洲橡木</h3>
+    <table class="toast-table">
+      <thead>
+        <tr>
+          <th>烘烤程度</th>
+          <th>主要風味</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="toast-label toast-light">Light</span></td>
+          <td>香草、椰子、清爽木質感</td>
+        </tr>
+        <tr>
+          <td><span class="toast-label toast-medium">Medium</span></td>
+          <td>香草、蜂蜜、焦糖、烤辛香料、烤椰子、咖啡、可可</td>
+        </tr>
+        <tr>
+          <td><span class="toast-label toast-heavy">Heavy</span></td>
+          <td>濃烈 Espresso、強烈焦糖、提拉米蘇、煙燻</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>法國橡木（歐洲）</h3>
+    <table class="toast-table">
+      <thead>
+        <tr>
+          <th>烘烤程度</th>
+          <th>主要風味</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="toast-label toast-light">Light</span></td>
+          <td>榛果、雪松、丁香（Clove）、乾薑</td>
+        </tr>
+        <tr>
+          <td><span class="toast-label toast-medium">Medium</span></td>
+          <td>巧克力、牛奶巧克力、雪松、雪茄盒、肉桂、焦糖、香草莢</td>
+        </tr>
+        <tr>
+          <td><span class="toast-label toast-heavy">Heavy</span></td>
+          <td>焦糖烤布蕾、Espresso、木炭煙燻、抹茶、Butterscotch（奶油糖）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <div class="callout-label">實務補充</div>
+      <p>大部分威士忌使用<strong>中至重烘烤</strong>桶；葡萄酒因酒體纖細，多使用<strong>中偏輕烘烤</strong>，且採間接加熱（非直火），避免強烈木質風味蓋過果香。</p>
+    </div>
+  </section>
+
+  <!-- Section 5 -->
+  <section id="sec5">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <h2>風乾工藝（Seasoning）</h2>
+    </div>
+    <p>橡木在裁成木板後，必須先經過<strong>風乾（Seasoning）</strong>才能用於製桶。這個過程英文也稱為 air-drying，最優質的做法是全天候戶外自然風乾，下雨不收、太陽不遮，讓木材自然與環境互動。</p>
+
+    <h3>風乾的三種作用機制</h3>
+
+    <div class="science-row">
+      <div class="science-icon rain">🌧️</div>
+      <div>
+        <div class="science-label">物理作用——雨水、氧氣、紫外線</div>
+        <div class="science-desc">溶解並帶走酚類化合物（苦澀的單寧、香豆素等），「洗去」過於強烈的木質異味，同時讓木材的芳香前驅物濃度上升。自然風乾兩至三年後，木材的 Vanillin 含量遠高於人工窯乾者（窯乾過程會損失約 70% 的 Vanillin）。</div>
+      </div>
+    </div>
+
+    <div class="science-row">
+      <div class="science-icon fungi">🍄</div>
+      <div>
+        <div class="science-label">化學作用——真菌（Fungus）的貢獻</div>
+        <div class="science-desc">木板表面長出的真菌並非污染，而是風味功臣。這些微生物在木孔中生長，分解木質素，<strong>合成額外的芳香化合物</strong>，讓木材的香氣更為豐富。這也是自然風乾桶子風味深度遠高於窯乾桶的原因之一。</div>
+      </div>
+    </div>
+
+    <div class="science-row">
+      <div class="science-icon micro">🔬</div>
+      <div>
+        <div class="science-label">微生物作用——釋放木材糖分</div>
+        <div class="science-desc">微生物代謝分解細胞壁，釋放橡木桶內原本鎖住的天然糖分，成為後續熟成時酒液可以萃取的風味物質。</div>
+      </div>
+    </div>
+
+    <div class="callout teal">
+      <div class="callout-label">窯乾的代價</div>
+      <p>人工窯乾雖然快速便宜，但無法有效去除苦澀物質，Vanillin 等芳香物質損失高達七成，也不會發生真菌合成芳香化合物的化學過程，最終做出的桶子木質影響較粗糙、風味深度較淺。</p>
+    </div>
+  </section>
+
+  <!-- Section 6 -->
+  <section id="sec6">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <h2>桶內化學：三大反應機制</h2>
+    </div>
+    <p>酒液進入桶子後，與木材的接觸會引發持續性的化學反應，這是熟成的核心。</p>
+
+    <h4>木質素（Lignin）分解</h4>
+    <p>木質素在高溫烘烤下分解為<strong>香草醛（Vanillin）</strong>，賦予酒液香草風味。烘烤越深、時間越長，這個轉化越完全。</p>
+
+    <h4>半纖維素（Hemicellulose）焦糖化</h4>
+    <p>炭化過程將半纖維素分解為十種糖，在木材最深層焦糖化，形成緻密的「糖層」。酒液萃取這層物質，帶出焦糖、太妃糖、蜂蜜等甜感。</p>
+
+    <h4>單寧（Tannin）的氧化與轉化</h4>
+    <p>單寧透過桶壁微孔進入的微量氧氣緩慢氧化，單寧酸逐漸轉化為色素分子，讓威士忌上色；同時氧化過程軟化酒液的刺激感，讓口感更加圓潤。</p>
+
+    <div class="callout">
+      <div class="callout-label">製桶師的三個關鍵變數</div>
+      <p>戶外風乾多久（Seasoning）、烘烤多久（Toasting）、炭化多久（Charring）——這三個決定，幾乎決定了一支威士忌風味的基本框架。</p>
+    </div>
+  </section>
+
+  <!-- Section 7 -->
+  <section id="sec7">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <h2>橡木的風土——產地也有差</h2>
+    </div>
+    <p>就像葡萄品種有風土概念，橡木的生長地點同樣影響木材的化學組成與最終風味。</p>
+    <p>美洲白橡木在不同州份——維吉尼亞（Virginia）、密蘇里（Missouri）等——因氣候、土質、水分條件不同，長出的木材年輪密度、Lactone 含量、單寧結構都有差異。<strong>氣候越冷，年輪越密，木紋越緊，烘烤後萃取速度越慢，風味越細膩。</strong></p>
+    <p>法國橡木的主要產區在 Limousin 和 Allier 森林，兩者特性也略有差別；西班牙用於雪莉桶的橡木（<em>Quercus robur</em>）與法國橡木也各有風格。近年來也出現了愛爾蘭本地橡木、日本水楢（Mizunara）等非傳統木材的熟成實驗，各自帶出截然不同的香氣層次。</p>
+
+    <div class="callout teal">
+      <div class="callout-label">延伸思考</div>
+      <p>台灣亞熱帶氣候對熟成的影響，跟橡木的氣候風土概念是同一套邏輯——天使的份額（Angel's Share）加速，熟成加快，風味也因此更集中。NOVA Distillery 在高雄的熟成實驗，正是對這個問題的直接回應。</p>
+    </div>
+  </section>
+
+  <!-- Section 8 -->
+  <section id="sec8">
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <h2>快速記憶卡</h2>
+    </div>
+    <p>品酒現場或撰寫文案時快速對照用。</p>
+
+    <div class="fact-tags" style="flex-direction: column; gap: 12px;">
+      <div class="fact-tag" style="padding: 12px 16px; line-height: 1.7;">
+        <strong>白橡木才能做桶</strong>　因為 Tylosis 結構防漏，紅橡木無此結構故不適用
+      </div>
+      <div class="fact-tag" style="padding: 12px 16px; line-height: 1.7;">
+        <strong>美洲桶 = 甜、奶、椰子</strong>　Lactone 高、單寧低，烘烤後帶出香草焦糖系
+      </div>
+      <div class="fact-tag" style="padding: 12px 16px; line-height: 1.7;">
+        <strong>歐洲桶 = 乾、澀、辛香</strong>　單寧高（法桶是美桶的 8–10 倍），酚類豐富，結構感強
+      </div>
+      <div class="fact-tag" style="padding: 12px 16px; line-height: 1.7;">
+        <strong>烘烤越重，風味越往烘焙煙燻走</strong>　輕烘 = 花果，中烘 = 焦糖蜂蜜，重烘 = 咖啡煙燻
+      </div>
+      <div class="fact-tag" style="padding: 12px 16px; line-height: 1.7;">
+        <strong>自然風乾優於窯乾</strong>　真菌合成芳香物、雨水洗去苦澀、紫外線氧化 → 風味更深
+      </div>
+      <div class="fact-tag" style="padding: 12px 16px; line-height: 1.7;">
+        <strong>同品種橡木、不同產地，風味也不同</strong>　樹也有風土，年輪密度 = 冷暖氣候的紀錄
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="color: var(--amber-light); font-weight: 500; margin-bottom: 8px;">Nova Whisky Bar 新星威士忌酒館</div>
+      <div>高雄市苓雅區林森二路128巷14號 2樓</div>
+      <div>2F, No. 14, Ln. 128, Linsen 2nd Rd., Lingya, Kaohsiung</div>
+      <div style="margin-top: 6px;">(07) 330-8050</div>
+    </div>
+    <div>
+      <div style="color: var(--amber-light); font-weight: 500; margin-bottom: 8px;">營業時間</div>
+      <div>週日至週五　20:00 – 01:30</div>
+      <div>週六　20:00 – 02:00</div>
+      <div style="margin-top: 12px; font-size: 11px; line-height: 1.6;">素材來源：Drin Drin Tipsy EP207 ／ Nature Scientific Reports ／ Scientific American ／ Whisky Advocate ／ Wine Enthusiast ／ NCBI PMC</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
