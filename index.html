@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>一篇看懂橡木桶如何改變威士忌｜Nova Whisky Bar 新星威士忌酒館</title>
+  <meta name="description" content="由高雄 Nova Whisky Bar 新星威士忌酒館整理：從美洲橡木、歐洲橡木、風乾、烘烤到桶型風味，帶你看懂威士忌為什麼會有香草、椰子、焦糖、雪松與辛香料。" />
+  <meta property="og:title" content="一篇看懂橡木桶如何改變威士忌｜Nova Whisky Bar" />
+  <meta property="og:description" content="為什麼威士忌會有香草、椰子、焦糖、雪松與辛香料？很多答案，都藏在橡木桶裡。" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#120d0a" />
+  <style>
+    :root {
+      --bg: #120d0a;
+      --bg-2: #1d1510;
+      --paper: #f5eadc;
+      --paper-2: #fff8ed;
+      --ink: #20160f;
+      --muted: #765f4c;
+      --gold: #c99a52;
+      --gold-2: #f0c978;
+      --line: rgba(201, 154, 82, 0.32);
+      --cream-line: rgba(255, 248, 237, 0.18);
+      --danger: #a31621;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+      --max: 1120px;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      --serif: Georgia, "Times New Roman", "Noto Serif TC", serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--paper);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(201, 154, 82, 0.20), transparent 24%),
+        radial-gradient(circle at 88% 4%, rgba(126, 74, 34, 0.28), transparent 26%),
+        linear-gradient(180deg, #120d0a 0%, #1c120c 44%, #0e0b09 100%);
+      line-height: 1.75;
+      padding-bottom: 88px;
+    }
+
+    a { color: inherit; }
+
+    .skip-link {
+      position: absolute;
+      top: -48px;
+      left: 16px;
+      background: var(--gold-2);
+      color: var(--ink);
+      padding: 8px 12px;
+      border-radius: 999px;
+      z-index: 1000;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .age-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      background: rgba(8, 6, 5, 0.86);
+      backdrop-filter: blur(10px);
+      padding: 24px;
+    }
+
+    .age-card {
+      width: min(560px, 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(160deg, #fff8ed 0%, #ecd9bd 100%);
+      color: var(--ink);
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .age-card h2 {
+      margin: 0 0 12px;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.15;
+    }
+
+    .age-card p { color: #4b3728; margin: 0 0 18px; }
+
+    .age-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary { background: var(--ink); color: var(--paper); }
+    .btn-outline { border-color: rgba(32,22,15,.28); color: var(--ink); background: transparent; }
+    .btn-gold { background: linear-gradient(135deg, var(--gold-2), var(--gold)); color: #1b120b; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(18, 13, 10, 0.72);
+      border-bottom: 1px solid var(--cream-line);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      text-decoration: none;
+      letter-spacing: .02em;
+    }
+
+    .brand strong { font-size: 1rem; }
+    .brand span { font-size: .78rem; color: rgba(245,234,220,.72); }
+
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(245,234,220,.78);
+      font-size: .9rem;
+      padding: 8px 11px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover { background: rgba(255,255,255,.08); color: var(--paper); }
+
+    .hero {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 48px auto 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-2);
+      font-size: .9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold-2);
+      display: inline-block;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 6.2vw, 5.8rem);
+      letter-spacing: -0.055em;
+      max-width: 900px;
+    }
+
+    .hero-lead {
+      margin: 22px 0 0;
+      color: rgba(245,234,220,.82);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-card {
+      background: linear-gradient(155deg, rgba(245,234,220,.98), rgba(239,217,188,.95));
+      color: var(--ink);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -86px;
+      bottom: -90px;
+      border: 1px solid rgba(32,22,15,.12);
+      border-radius: 50%;
+    }
+
+    .hero-card h2 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-item span {
+      display: block;
+      font-size: .78rem;
+      color: var(--muted);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .info-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    section {
+      scroll-margin-top: 96px;
+      margin: 88px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .kicker {
+      display: block;
+      color: var(--gold-2);
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .8rem;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: -.035em;
+    }
+
+    .section-note {
+      color: rgba(245,234,220,.68);
+      max-width: 420px;
+      margin: 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--cream-line);
+      background: rgba(255,255,255,.055);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      min-height: 100%;
+    }
+
+    .card.light {
+      background: var(--paper-2);
+      color: var(--ink);
+      border-color: rgba(32,22,15,.12);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .card p { margin: 0; color: rgba(245,234,220,.74); }
+    .card.light p { color: #5a4433; }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(201,154,82,.14);
+      border: 1px solid rgba(201,154,82,.24);
+      color: var(--gold-2);
+      font-size: .86rem;
+      font-weight: 650;
+    }
+
+    .light .pill {
+      color: #6e451a;
+      background: rgba(201,154,82,.16);
+      border-color: rgba(201,154,82,.28);
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: 22px;
+      align-items: center;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(201,154,82,.15), rgba(255,255,255,.045));
+      padding: 28px;
+      overflow: hidden;
+    }
+
+    .feature .big-number {
+      font-family: var(--serif);
+      font-size: clamp(5rem, 14vw, 11rem);
+      line-height: .85;
+      color: rgba(240,201,120,.22);
+      letter-spacing: -.08em;
+    }
+
+    .feature p { color: rgba(245,234,220,.78); margin: 12px 0 0; }
+
+    .compare {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.055);
+      border: 1px solid var(--cream-line);
+    }
+
+    .compare th, .compare td {
+      padding: 16px;
+      border-bottom: 1px solid var(--cream-line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .compare th {
+      background: rgba(201,154,82,.16);
+      color: var(--gold-2);
+      font-size: .88rem;
+      letter-spacing: .04em;
+    }
+
+    .compare tr:last-child td { border-bottom: 0; }
+    .compare td { color: rgba(245,234,220,.78); }
+
+    .flavor-finder {
+      border-radius: var(--radius-xl);
+      background: var(--paper-2);
+      color: var(--ink);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .finder-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .finder-buttons button {
+      border: 1px solid rgba(32,22,15,.14);
+      background: #fff;
+      color: var(--ink);
+      padding: 9px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 750;
+    }
+
+    .finder-buttons button.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .finder-output {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .output-box {
+      background: #f0dfc7;
+      border: 1px solid rgba(32,22,15,.12);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .output-box strong { display: block; margin-bottom: 6px; }
+    .output-box p { margin: 0; color: #5a4433; }
+
+    .cta {
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      background:
+        linear-gradient(135deg, rgba(240,201,120,.24), rgba(255,255,255,.04)),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23f0c978' stroke-opacity='.15'%3E%3Cpath d='M20 90h140M90 20v140'/%3E%3Ccircle cx='90' cy='90' r='42'/%3E%3C/g%3E%3C/svg%3E");
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 { max-width: 760px; }
+    .cta p { max-width: 760px; color: rgba(245,234,220,.78); }
+
+    .meta-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .meta-item {
+      border: 1px solid var(--cream-line);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .meta-item span {
+      display: block;
+      color: var(--gold-2);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 850;
+      margin-bottom: 4px;
+    }
+
+    .meta-item strong { color: rgba(245,234,220,.88); }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .toc-card {
+      display: block;
+      min-height: 132px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--cream-line);
+      background: rgba(255,255,255,.055);
+      text-decoration: none;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .toc-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--line);
+      background: rgba(201,154,82,.11);
+    }
+
+    .toc-card span {
+      display: block;
+      color: rgba(240,201,120,.72);
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .toc-card strong { display: block; color: var(--paper); line-height: 1.35; }
+    .toc-card small { display: block; margin-top: 8px; color: rgba(245,234,220,.62); line-height: 1.55; }
+
+    .takeaway {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--gold-2);
+      background: rgba(240,201,120,.11);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      color: rgba(245,234,220,.82);
+    }
+
+    .takeaway strong { color: var(--gold-2); }
+
+    .chem-grid, .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .memory-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(32,22,15,.12);
+      background: linear-gradient(160deg, #fff8ed, #edd8b8);
+      color: var(--ink);
+      padding: 22px;
+      min-height: 176px;
+    }
+
+    .memory-card span {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .memory-card h3 { font-size: 1.12rem; }
+    .memory-card p { color: #5a4433; margin: 8px 0 0; }
+
+    .note-band {
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(201,154,82,.18), rgba(255,255,255,.045));
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .note-band p { color: rgba(245,234,220,.78); margin: 0; }
+
+    .sources {
+      background: rgba(0,0,0,.18);
+      border: 1px solid var(--cream-line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+
+    .sources ol {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: rgba(245,234,220,.72);
+      font-size: .92rem;
+    }
+
+    .sources a { color: var(--gold-2); word-break: break-word; }
+
+    .footer {
+      margin-top: 80px;
+      padding: 42px 0 34px;
+      border-top: 1px solid var(--cream-line);
+      color: rgba(245,234,220,.72);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .footer h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .legal-strip {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 8000;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      text-align: center;
+      color: #fff;
+      background: #090909;
+      border-top: 4px solid #fff;
+      font-weight: 900;
+      letter-spacing: .02em;
+      line-height: 1.55;
+    }
+
+    .small { font-size: .88rem; color: rgba(245,234,220,.62); }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 860px) {
+      .hero, .feature, .grid-2, .footer-grid { grid-template-columns: 1fr; }
+      .grid-3, .meta-strip, .toc-grid, .chem-grid, .memory-grid { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; flex-direction: column; padding: 12px 0; }
+      .nav-links { justify-content: flex-start; }
+      .section-head { display: block; }
+      .section-note { margin-top: 12px; }
+      .finder-output { grid-template-columns: 1fr; }
+      .compare { display: block; overflow-x: auto; }
+      section { margin: 64px 0; }
+    }
+
+    @media print {
+      .topbar, .legal-strip, .age-gate, .hero-actions, .finder-buttons { display: none !important; }
+      body { background: #fff; color: #000; padding-bottom: 0; }
+      .card, .feature, .cta, .sources, .hero-card, .flavor-finder { box-shadow: none; border: 1px solid #aaa; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+    <div class="age-card">
+      <p class="eyebrow" style="color:#7a4d17;margin-bottom:12px;">Nova Whisky Bar Knowledge</p>
+      <h2 id="ageTitle">請確認你已滿十八歲</h2>
+      <p>本頁包含威士忌與酒類熟成知識，並提供酒吧資訊。未滿十八歲請勿飲酒，也請勿瀏覽酒類宣傳內容。</p>
+      <div class="age-actions">
+        <button class="btn btn-primary" id="enterSite">我已滿 18 歲，繼續閱讀</button>
+        <a class="btn btn-outline" href="https://www.google.com/">離開頁面</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <nav class="nav" aria-label="主選單">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <strong>Nova Whisky Bar</strong>
+        <span>新星威士忌酒館｜Kaohsiung</span>
+      </a>
+      <div class="nav-links">
+        <a href="#map">章節導覽</a>
+        <a href="#quick">30 秒看懂</a>
+        <a href="#flavor">風味來源</a>
+        <a href="#compare">美洲 vs 歐洲</a>
+        <a href="#deep">進階知識</a>
+        <a href="#memory">快速記憶卡</a>
+        <a href="#visit">來店體驗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div id="top" class="hero">
+      <div>
+        <span class="eyebrow">Oak Cask Guide</span>
+        <h1>為什麼威士忌會有香草、椰子、焦糖味？</h1>
+        <p class="hero-lead">很多答案，都藏在橡木桶裡。這是一份由 Nova Whisky Bar 整理給威士忌新手與好奇者的橡木桶入門指南：從美洲橡木、歐洲橡木、風乾、烘烤，到杯中風味一次看懂。</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#quick">先看 30 秒版本</a>
+          <a class="btn btn-outline" style="color:var(--paper);border-color:rgba(245,234,220,.35);" href="#visit">查看酒吧資訊</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Nova Whisky Bar 店家資訊">
+        <div>
+          <span class="kicker" style="color:#7a4d17;">Visit Us</span>
+          <h2>來高雄，喝一杯看懂橡木桶。</h2>
+          <p style="color:#5a4433;margin:0;">你不需要先背完知識。到 Nova，我們可以從杯子裡慢慢喝出香草、椰子、雪松、巧克力、煙燻與單寧的差別。</p>
+        </div>
+        <div class="info-list">
+          <div class="info-item"><span>店名</span><strong>Nova Whisky Bar 新星威士忌酒館</strong></div>
+          <div class="info-item"><span>地址</span><strong>高雄市苓雅區林森二路128巷14號 2樓</strong></div>
+          <div class="info-item"><span>電話</span><strong><a href="tel:+88673308050">(07) 330-8050</a></strong></div>
+          <div class="info-item"><span>營業時間</span><strong>週日至週五 20:00–01:30<br>週六 20:00–02:00</strong></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="map" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Knowledge Map</span>
+          <h2>這份指南怎麼看？</h2>
+        </div>
+        <p class="section-note">這份指南以清楚目錄、快速結論與品飲現場可用的記憶卡為骨架，讓新手可以先抓重點，有興趣的人再慢慢深入。</p>
+      </div>
+      <div class="meta-strip" aria-label="文件基本資訊">
+        <div class="meta-item"><span>素材來源</span><strong>Drin Drin Tipsy EP207 × 公開資料交叉整理</strong></div>
+        <div class="meta-item"><span>用途</span><strong>新手入門｜品酒教育｜Nova Whisky Bar 來店前閱讀</strong></div>
+        <div class="meta-item"><span>閱讀方式</span><strong>先看 30 秒版本，再依興趣深入橡木桶機制</strong></div>
+      </div>
+      <div class="toc-grid">
+        <a class="toc-card" href="#quick"><span>01</span><strong>30 秒看懂橡木桶</strong><small>先抓住美洲橡木、歐洲橡木與烘烤方向。</small></a>
+        <a class="toc-card" href="#flavor"><span>02</span><strong>風味快速查詢</strong><small>從香草、椰子、焦糖、辛香料回推桶子因素。</small></a>
+        <a class="toc-card" href="#compare"><span>03</span><strong>美洲 vs 歐洲</strong><small>比較兩種橡木的風味、口感與製桶特性。</small></a>
+        <a class="toc-card" href="#deep"><span>04</span><strong>進階知識</strong><small>白橡木、Tyloses、風乾、烘烤與桶內化學。</small></a>
+        <a class="toc-card" href="#memory"><span>05</span><strong>快速記憶卡</strong><small>把重點變成現場點酒、聊天、寫筆記時能用的短句。</small></a>
+        <a class="toc-card" href="#visit"><span>06</span><strong>來店體驗</strong><small>想實際喝出差異，可以到 Nova 從杯中比較。</small></a>
+      </div>
+    </section>
+
+    <section id="quick" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Quick Start</span>
+          <h2>30 秒看懂橡木桶</h2>
+        </div>
+        <p class="section-note">先不用記專有名詞。把橡木桶想成酒的第二位創作者，它會改變香氣、顏色、口感與尾韻。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>美洲橡木：甜美、香草、椰子</h3>
+          <p>常見於前波本桶與部分葡萄酒桶。容易讓人聯想到香草、椰子、蜂蜜、焦糖、奶油與烘烤甜感。</p>
+          <div class="pill-row"><span class="pill">香草</span><span class="pill">椰子</span><span class="pill">焦糖</span><span class="pill">蜂蜜</span></div>
+        </article>
+        <article class="card">
+          <h3>歐洲橡木：結構、辛香、單寧</h3>
+          <p>常見於葡萄酒桶、干邑桶、雪莉桶與威士忌熟成。容易帶出雪松、丁香、肉桂、巧克力、茶感與乾澀結構。</p>
+          <div class="pill-row"><span class="pill">雪松</span><span class="pill">丁香</span><span class="pill">巧克力</span><span class="pill">單寧</span></div>
+        </article>
+        <article class="card">
+          <h3>烘烤越深：越往咖啡、可可、煙燻走</h3>
+          <p>製桶師透過烘烤與炭化，讓木材中的糖類、木質素與單寧轉化，形成焦糖、咖啡、可可、煙燻等深色風味。</p>
+          <div class="pill-row"><span class="pill">咖啡</span><span class="pill">可可</span><span class="pill">煙燻</span><span class="pill">木炭</span></div>
+        </article>
+      </div>
+      <div class="takeaway"><strong>關鍵結論：</strong>橡木桶不是單一風味來源，而是一套由樹種、產地、風乾、烘烤、炭化、前裝酒液、熟成時間與倉庫環境共同組成的熟成系統。</div>
+    </section>
+
+    <section id="flavor" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Flavor Finder</span>
+          <h2>你喝到的味道，可能來自哪裡？</h2>
+        </div>
+        <p class="section-note">點選一個風味，看看它常和哪些橡木桶因素有關。這不是絕對公式，而是品飲時很實用的判斷線索。</p>
+      </div>
+      <div class="flavor-finder">
+        <h3>風味快速查詢</h3>
+        <div class="finder-buttons" aria-label="風味查詢按鈕">
+          <button class="active" data-flavor="vanilla">香草</button>
+          <button data-flavor="coconut">椰子</button>
+          <button data-flavor="caramel">焦糖／蜂蜜</button>
+          <button data-flavor="spice">辛香料</button>
+          <button data-flavor="smoke">咖啡／煙燻</button>
+          <button data-flavor="tannin">乾澀／茶感</button>
+        </div>
+        <div class="finder-output" id="finderOutput">
+          <div class="output-box"><strong>常見來源</strong><p id="sourceText">橡木中的木質素受熱轉化後，會產生與香草氣息相關的香草醛。</p></div>
+          <div class="output-box"><strong>常見於</strong><p id="contextText">美洲橡木、前波本桶、中度烘烤桶、香草與奶油感明顯的威士忌。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">American Oak vs European Oak</span>
+          <h2>美洲橡木與歐洲橡木差在哪裡？</h2>
+        </div>
+        <p class="section-note">這裡列的是常見傾向。實際風味仍會受到產地、風乾、烘烤、桶齡、前裝酒液、熟成時間與倉庫環境影響。</p>
+      </div>
+      <table class="compare" aria-label="美洲橡木與歐洲橡木比較表">
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>美洲白橡木</th>
+            <th>歐洲／法國橡木</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>常見學名</td>
+            <td>Quercus alba</td>
+            <td>Quercus robur、Quercus petraea</td>
+          </tr>
+          <tr>
+            <td>常見風味</td>
+            <td>香草、椰子、奶油、蜂蜜、焦糖、甜香料</td>
+            <td>雪松、丁香、肉桂、巧克力、乾果、茶感、單寧</td>
+          </tr>
+          <tr>
+            <td>口感傾向</td>
+            <td>較甜美、圓潤、奶油感明顯</td>
+            <td>較有結構、辛香、乾澀與木質層次</td>
+          </tr>
+          <tr>
+            <td>製桶特性</td>
+            <td>tyloses 較發達，液密性好，較能接受鋸切，出材率通常較高</td>
+            <td>通常更依賴順紋劈裂以降低滲漏風險，木材損耗可能較高</td>
+          </tr>
+          <tr>
+            <td>常見應用</td>
+            <td>波本桶、部分葡萄酒桶、威士忌熟成桶</td>
+            <td>葡萄酒桶、干邑桶、雪莉桶、威士忌熟成與過桶</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="takeaway"><strong>公開頁面建議說法：</strong>不要把美洲橡木與歐洲橡木寫成絕對公式。比較穩的說法是「常見傾向」，因為同樣的橡木種類，也會因產地、風乾、烘烤、桶齡與熟成條件而改變。</div>
+    </section>
+
+    <section class="container">
+      <div class="cta">
+        <span class="kicker">Taste It in the Glass</span>
+        <h2>想真正喝出差異，不一定要從背書開始。</h2>
+        <p>橡木桶知識最有趣的地方，是它最後都會回到杯子裡。在 Nova Whisky Bar，我們可以用不同桶型、不同熟成風格的威士忌，帶你實際比較美洲橡木的香草椰子、歐洲橡木的辛香單寧、雪莉桶的乾果巧克力，以及葡萄酒桶帶來的紅果與結構感。</p>
+        <a class="btn btn-gold" href="#visit">查看來店資訊</a>
+      </div>
+    </section>
+
+    <section id="deep" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Deep Dive</span>
+          <h2>進階知識：橡木桶如何真的改變酒？</h2>
+        </div>
+        <p class="section-note">這一段適合想更深入理解威士忌、葡萄酒、白蘭地或蘭姆酒熟成的人。</p>
+      </div>
+
+      <div class="feature">
+        <div class="big-number">01</div>
+        <div>
+          <h3>為什麼多數熟成桶使用白橡木？</h3>
+          <p>白橡木具備強度、可彎曲性與良好的液密性，能承裝酒液並在長時間熟成中釋放合適的香氣與單寧。紅橡木雖然常見於家具，但通常不適合做熟成酒桶，因為液體更容易滲漏。</p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px;">
+        <article class="card light">
+          <h3>Tyloses：白橡木防漏的關鍵</h3>
+          <p>Tyloses 可以理解成木材導管裡自然形成的阻塞結構。美洲白橡木的 tyloses 較發達，因此液密性好，也讓製桶時能有較高的木材利用率。</p>
+        </article>
+        <article class="card light">
+          <h3>不要說成「任意方向裁切」</h3>
+          <p>比較精準的說法是：美洲白橡木較能接受鋸切；歐洲橡木通常更需要順著木紋劈裂，以降低滲漏風險。這也是兩者成本與製桶方式差異的一部分。</p>
+        </article>
+      </div>
+
+      <div class="feature" style="margin-top:18px;">
+        <div class="big-number">02</div>
+        <div>
+          <h3>Seasoning：風乾不是單純曬乾</h3>
+          <p>橡木被裁成桶板後，通常會經過一段時間的戶外自然風乾。雨水、陽光、氧氣、真菌與微生物會慢慢修飾木材，降低過於粗糙的苦澀成分，也讓芳香潛力變得更細緻。</p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:18px;">
+        <article class="card">
+          <h3>物理作用</h3>
+          <p>雨水能沖洗部分可溶性成分，氧氣與陽光則推動氧化與分解，降低新木材過度尖銳的木質感。</p>
+        </article>
+        <article class="card">
+          <h3>微生物作用</h3>
+          <p>自然環境中的真菌與微生物會參與木材變化，影響後續可被酒液萃取的芳香化合物。</p>
+        </article>
+        <article class="card">
+          <h3>時間作用</h3>
+          <p>自然風乾通常需要數月到數年不等。時間越足，木材越有機會從粗糙轉為細緻。</p>
+        </article>
+      </div>
+
+      <div class="feature" style="margin-top:18px;">
+        <div class="big-number">03</div>
+        <div>
+          <h3>Toasting 與 Charring：烘烤和炭化不一樣</h3>
+          <p>Toasting 是透過加熱讓桶內側木材產生香氣轉化；Charring 則是更強烈的炭化，會形成炭層。葡萄酒桶常討論烘烤程度；波本等美國威士忌則依法使用全新炭化橡木桶。</p>
+        </div>
+      </div>
+
+      <table class="compare" style="margin-top:18px;" aria-label="烘烤程度與風味對照表">
+        <thead>
+          <tr>
+            <th>程度</th>
+            <th>常見風味方向</th>
+            <th>品飲聯想</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>輕烘烤</td>
+            <td>清爽木質、香草、細緻辛香</td>
+            <td>香草、椰子、榛果、乾薑、淡淡木質</td>
+          </tr>
+          <tr>
+            <td>中度烘烤</td>
+            <td>甜感、焦糖化、堅果、巧克力</td>
+            <td>蜂蜜、焦糖、可可、肉桂、烤堅果</td>
+          </tr>
+          <tr>
+            <td>重度烘烤／炭化</td>
+            <td>深色烘烤、煙燻、咖啡、焦香</td>
+            <td>濃縮咖啡、木炭、煙燻、黑巧克力、焦糖</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="compare" style="margin-top:18px;" aria-label="美洲橡木與法國橡木不同烘烤程度風味對照表">
+        <thead>
+          <tr>
+            <th>橡木種類</th>
+            <th>Light Toast</th>
+            <th>Medium Toast</th>
+            <th>Heavy Toast / Char</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>美洲橡木</td>
+            <td>香草、椰子、清爽木質</td>
+            <td>香草、蜂蜜、焦糖、烤椰子、咖啡、可可</td>
+            <td>濃縮咖啡、強烈焦糖、深色烘焙、煙燻</td>
+          </tr>
+          <tr>
+            <td>法國／歐洲橡木</td>
+            <td>榛果、雪松、丁香、乾薑</td>
+            <td>巧克力、雪松、雪茄盒、肉桂、焦糖、香草莢</td>
+            <td>焦糖烤布蕾、濃縮咖啡、木炭、煙燻、奶油糖</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note-band"><p><strong>品飲備註：</strong>「提拉米蘇、焦糖烤布蕾、抹茶」這類詞更適合視為感官聯想，而不是固定的科學分類。公開頁面保留這種畫面感，但用「可能聯想到」的方式呈現會更穩。</p></div>
+
+      <div class="feature" style="margin-top:18px;">
+        <div class="big-number">04</div>
+        <div>
+          <h3>橡木桶的風味化學</h3>
+          <p>橡木桶的風味不是單純的「木頭味」，而是木材中的不同成分在風乾、烘烤、炭化與熟成過程中逐步轉化，最後進入酒液，形成香草、焦糖、辛香料、茶感與木質結構。</p>
+        </div>
+      </div>
+      <div class="chem-grid">
+        <article class="card">
+          <h3>木質素 Lignin</h3>
+          <p>受熱後可能產生香草醛與其他芳香醛類，讓酒液出現香草、木質、辛香料與煙燻相關聯想。</p>
+        </article>
+        <article class="card">
+          <h3>半纖維素 Hemicellulose</h3>
+          <p>加熱後會分解並產生焦糖化、烘焙、堅果、蜂蜜、太妃糖等甜香方向，是橡木桶甜感的重要來源之一。</p>
+        </article>
+        <article class="card">
+          <h3>單寧 Tannins</h3>
+          <p>帶來乾澀、茶感、木質結構與尾韻收斂感，也會參與熟成期間的氧化與聚合反應，影響口感與色澤。</p>
+        </article>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px;">
+        <article class="card light">
+          <h3>不能只用顏色判斷桶型</h3>
+          <p>酒色受橡木種類、桶齡、前裝酒、熟成時間、酒精度、倉庫環境與是否添加焦糖色素等因素影響。同樣是美洲橡木，也可能因長時間熟成或雪莉 seasoned cask 而顏色很深。</p>
+        </article>
+        <article class="card light">
+          <h3>橡木也有自己的風土</h3>
+          <p>同樣是美洲白橡木，生長在不同州份、森林、氣候與土壤條件下，也會有不同木紋、年輪與化學組成。酒液接觸的不是抽象的「木頭」，而是一棵樹曾經生長過的地方。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="memory" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Memory Cards</span>
+          <h2>快速記憶卡</h2>
+        </div>
+        <p class="section-note">這一段把橡木桶知識整理成一般人也能記住的版本，適合點酒、聊天、寫品飲筆記時快速使用。</p>
+      </div>
+      <div class="memory-grid">
+        <article class="memory-card"><span>1</span><h3>白橡木才適合長時間裝酒</h3><p>重點不是顏色，而是木材結構、液密性與能否在熟成中穩定承裝酒液。</p></article>
+        <article class="memory-card"><span>2</span><h3>美洲桶常見甜、奶、椰子</h3><p>常和 oak lactones、香草醛、烘烤甜感連在一起，容易出現香草、椰子、焦糖、奶油感。</p></article>
+        <article class="memory-card"><span>3</span><h3>歐洲桶常見乾、澀、辛香</h3><p>常帶來雪松、丁香、肉桂、巧克力、茶感與結構感，但實際表現仍要看桶子狀態。</p></article>
+        <article class="memory-card"><span>4</span><h3>烘烤越重，越往深色風味走</h3><p>輕烘偏清爽木質；中烘偏焦糖蜂蜜；重烘與炭化更容易出現咖啡、可可與煙燻。</p></article>
+        <article class="memory-card"><span>5</span><h3>自然風乾是風味整理</h3><p>雨水、陽光、氧氣、真菌與微生物會慢慢修飾桶板，降低粗糙木質，發展更細緻的芳香潛力。</p></article>
+        <article class="memory-card"><span>6</span><h3>樹也有自己的風土</h3><p>同樣是橡木，產地、氣候、森林、年輪與木紋都會影響最後酒液能萃取到的風味。</p></article>
+      </div>
+    </section>
+
+    <section id="visit" class="container">
+      <div class="section-head">
+        <div>
+          <span class="kicker">Nova Whisky Bar</span>
+          <h2>來 Nova，從杯子裡喝懂橡木桶。</h2>
+        </div>
+        <p class="section-note">本頁是知識整理，不代表現場固定供應特定酒款。實際品項與價格以店內當日供應為準。</p>
+      </div>
+      <div class="grid-2">
+        <article class="card light">
+          <h3>適合誰來？</h3>
+          <p>剛開始喝威士忌的人、想找出自己喜歡哪種桶型的人、想比較雪莉桶與波本桶差異的人，或單純想在高雄找一間能慢慢喝、慢慢聊威士忌的酒吧。</p>
+        </article>
+        <article class="card light">
+          <h3>可以怎麼喝？</h3>
+          <p>你可以直接告訴我們你喜歡的味道，例如香草、椰子、煙燻、巧克力、果乾、辛香料；也可以說「我想喝懂橡木桶差異」，我們會依照現場酒款協助安排適合的方向。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="sources">
+        <span class="kicker">Sources & Notes</span>
+        <h2 style="font-size:2rem;">主要參考資料</h2>
+        <p class="small">本頁以 Drin Drin Tipsy EP207 的橡木桶主題內容為起點，並參考以下公開資料交叉整理。橡木桶風味描述為常見傾向，實際風味會因酒款、桶型、熟成條件與品飲情境而異。</p>
+        <ol>
+          <li>National Treasury Administration, Ministry of Finance — alcohol warning label information: <a href="https://www.nta.gov.tw/Eng/singlehtml/2736" target="_blank" rel="noopener">https://www.nta.gov.tw/Eng/singlehtml/2736</a></li>
+          <li>Scotch Whisky Association — Guidance on allowable casks for maturation: <a href="https://www.scotch-whisky.org.uk/media/2386/guidance-on-allowable-casks-for-maturation_2025-1.pdf" target="_blank" rel="noopener">https://www.scotch-whisky.org.uk/media/2386/guidance-on-allowable-casks-for-maturation_2025-1.pdf</a></li>
+          <li>TTB — American Single Malt Whisky standard: <a href="https://www.ttb.gov/public-information/featured-stories/ttb-establishes-american-single-malt-whisky-standard-identity" target="_blank" rel="noopener">https://www.ttb.gov/public-information/featured-stories/ttb-establishes-american-single-malt-whisky-standard-identity</a></li>
+          <li>Scientific Reports — X-ray computed tomography study on tyloses in white oak and red oak: <a href="https://www.nature.com/articles/s41598-024-67298-x" target="_blank" rel="noopener">https://www.nature.com/articles/s41598-024-67298-x</a></li>
+          <li>Silver Oak — American oak and The Oak Cooperage: <a href="https://silveroak.com/pages/american-oak" target="_blank" rel="noopener">https://silveroak.com/pages/american-oak</a></li>
+          <li>Silver Oak / PR Newswire — 2015 acquisition of A&K Cooperage: <a href="https://www.prnewswire.com/news-releases/silver-oak-becomes-first-north-american-winery-to-own-american-oak-barrel-cooperage-300083684.html" target="_blank" rel="noopener">https://www.prnewswire.com/news-releases/silver-oak-becomes-first-north-american-winery-to-own-american-oak-barrel-cooperage-300083684.html</a></li>
+          <li>Whisky Advocate — Why and how oak matters in whisky: <a href="https://whiskyadvocate.com/why-and-how-oak-matters-in-whisky" target="_blank" rel="noopener">https://whiskyadvocate.com/why-and-how-oak-matters-in-whisky</a></li>
+          <li>WineMaker Magazine — Oak barrel chemistry: <a href="https://winemakermag.com/technique/1033-oak-barrel-chemistry-techniques" target="_blank" rel="noopener">https://winemakermag.com/technique/1033-oak-barrel-chemistry-techniques</a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Nova Whisky Bar 新星威士忌酒館</h2>
+        <p>一間位於高雄的威士忌酒吧。希望把威士忌變得更生活化，也更容易被理解。</p>
+      </div>
+      <div>
+        <p><strong>地址</strong><br>高雄市苓雅區林森二路128巷14號 2樓</p>
+        <p><strong>電話</strong><br><a href="tel:+88673308050">(07) 330-8050</a></p>
+        <p><strong>營業時間</strong><br>週日至週五 20:00–01:30<br>週六 20:00–02:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal-strip" role="contentinfo" aria-label="酒類警語">
+    🔞 未滿十八歲禁止飲酒｜禁止酒駕｜飲酒過量，有害健康｜短時間大量飲酒可能致命 🔞
+  </div>
+
+  <script>
+    const ageGate = document.getElementById('ageGate');
+    const enterSite = document.getElementById('enterSite');
+    const ageConfirmed = localStorage.getItem('novaOakAgeConfirmed');
+
+    if (ageConfirmed === 'true') {
+      ageGate.style.display = 'none';
+    }
+
+    enterSite.addEventListener('click', () => {
+      localStorage.setItem('novaOakAgeConfirmed', 'true');
+      ageGate.style.display = 'none';
+    });
+
+    const flavorData = {
+      vanilla: {
+        source: '橡木中的木質素受熱轉化後，會產生與香草氣息相關的香草醛。',
+        context: '美洲橡木、前波本桶、中度烘烤桶、香草與奶油感明顯的威士忌。'
+      },
+      coconut: {
+        source: '橡木內酯，尤其常被連結到椰子、木質甜感與奶油感。',
+        context: '美洲白橡木、波本桶熟成、帶椰子或奶油甜香的威士忌。'
+      },
+      caramel: {
+        source: '半纖維素在烘烤或炭化過程中分解與焦糖化，帶出焦糖、蜂蜜、太妃糖與烘焙甜感。',
+        context: '中度至重度烘烤桶、前波本桶、新橡木桶，以及甜感較明顯的熟成風格。'
+      },
+      spice: {
+        source: '木質素、酚類化合物與烘烤作用會帶來丁香、肉桂、胡椒、乾薑等辛香料聯想。',
+        context: '歐洲橡木、法國橡木、雪莉桶、葡萄酒桶與辛香料結構明顯的酒款。'
+      },
+      smoke: {
+        source: '重度烘烤或炭化會形成更深色的烘烤與煙燻風味，可能讓人聯想到咖啡、可可、木炭或煙燻。',
+        context: '重烘烤桶、炭化新橡木桶、前波本桶，以及帶深色烘焙風味的威士忌。'
+      },
+      tannin: {
+        source: '橡木單寧會帶來乾澀、茶感、木質結構與尾韻收斂感。',
+        context: '歐洲橡木、新桶、酒齡較長或木質萃取明顯的熟成酒款。'
+      }
+    };
+
+    const buttons = document.querySelectorAll('[data-flavor]');
+    const sourceText = document.getElementById('sourceText');
+    const contextText = document.getElementById('contextText');
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+        const item = flavorData[button.dataset.flavor];
+        sourceText.textContent = item.source;
+        contextText.textContent = item.context;
+      });
+    });
+  </script>
+</body>
+</html>
