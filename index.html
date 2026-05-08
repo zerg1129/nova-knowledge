@@ -746,6 +746,31 @@
 
     .takeaway strong { color: var(--gold-2); }
 
+    .visual-figure {
+      margin: 24px 0;
+    }
+
+    .visual-frame {
+      overflow-x: auto;
+      border: 1px solid var(--cream-line);
+      border-radius: var(--radius-lg);
+      background: rgba(0,0,0,.18);
+      box-shadow: var(--shadow);
+    }
+
+    .visual-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .visual-figure figcaption {
+      margin-top: 10px;
+      color: rgba(247,243,234,.62);
+      font-size: .9rem;
+      line-height: 1.6;
+    }
+
     .chem-grid, .memory-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -885,6 +910,7 @@
       .section-note { margin-top: 12px; }
       .finder-output { grid-template-columns: 1fr; }
       .compare { display: block; overflow-x: auto; }
+      .visual-frame img { min-width: 720px; }
       section { margin: 64px 0; }
       h1 { letter-spacing: -.035em; }
       .hero { margin-top: 32px; }
@@ -955,7 +981,7 @@
       <div class="hero-copy">
         <span class="eyebrow">Oak Cask Guide</span>
         <h1>為什麼威士忌會有香草、椰子、焦糖味？</h1>
-        <p class="hero-lead">聽完 <a href="https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9" target="_blank" rel="noopener">Drin Drin Tipsy 最新一集聊橡木桶</a>，我們也想把這些知識整理成一份更容易吸收的版本。這份指南寫給威士忌新手與好奇者：從美洲橡木、歐洲橡木、風乾、烘烤，到杯中的香草、椰子、焦糖與辛香料，讓你下次喝威士忌時，多一些能辨認風味的線索。</p>
+        <p class="hero-lead">聽完 <a href="https://drindrintipsy.firstory.io/episodes/cmov6tb9w0hl901td30ws0ct9" target="_blank" rel="noopener">Drin Drin Tipsy EP207</a> 聊橡木桶，我們也想把這些知識整理成一份更容易入口的版本。<br>從美洲橡木、歐洲橡木、風乾、烘烤，到杯中的香草、椰子、焦糖與辛香料，讓你下次喝威士忌時，多一些能辨認風味的線索。</p>
         <div class="hero-tags" aria-label="本頁重點">
           <span class="hero-tag">新手友善</span>
           <span class="hero-tag">30 秒重點</span>
@@ -1020,6 +1046,12 @@
         </div>
         <p class="section-note">先不用記專有名詞。把橡木桶想成酒的第二位創作者，它會改變香氣、顏色、口感與尾韻。</p>
       </div>
+      <figure class="visual-figure">
+        <div class="visual-frame">
+          <img src="assets/oak-flavor-process.png" width="1448" height="1086" loading="lazy" alt="橡木如何塑造威士忌風味的流程圖，從橡木種類、風乾、烘烤炭化、化學轉化到杯中風味。" />
+        </div>
+        <figcaption>先用一張圖看懂橡木桶如何把木材、工藝與時間轉化成杯中的香氣與口感。</figcaption>
+      </figure>
       <div class="grid-3">
         <article class="card">
           <h3>美洲橡木：甜美、香草、椰子</h3>
@@ -1077,6 +1109,12 @@
         </div>
         <p class="section-note">這裡列的是常見傾向。實際風味仍會受到產地、風乾、烘烤、桶齡、前裝酒液、熟成時間與倉庫環境影響。</p>
       </div>
+      <figure class="visual-figure">
+        <div class="visual-frame">
+          <img src="assets/oak-type-comparison.png" width="1448" height="1086" loading="lazy" alt="美洲白橡木與歐洲法國橡木的風味比較圖，美洲橡木偏香草、椰子、奶油、蜂蜜與焦糖，歐洲橡木偏雪松、丁香、肉桂、巧克力與茶感。" />
+        </div>
+        <figcaption>美洲白橡木常讓人聯想到圓潤甜美；歐洲或法國橡木則更常帶出結構、辛香與單寧感。</figcaption>
+      </figure>
       <table class="compare" aria-label="美洲橡木與歐洲橡木比較表">
         <thead>
           <tr>
