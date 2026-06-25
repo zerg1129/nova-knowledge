@@ -509,6 +509,55 @@ details[open] summary::after {
   border-top: 1px solid var(--line);
 }
 
+.venue-panel {
+  background:
+    linear-gradient(145deg, rgba(200, 178, 118, 0.1), transparent 40%),
+    rgba(27, 27, 27, 0.88);
+}
+
+.venue-panel h2 {
+  margin-bottom: 10px;
+}
+
+.venue-intro {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.venue-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.venue-item {
+  display: grid;
+  gap: 5px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(36, 36, 36, 0.72);
+}
+
+.venue-label {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.venue-item strong {
+  color: var(--silver);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.venue-item a {
+  color: inherit;
+  text-decoration-color: rgba(200, 178, 118, 0.7);
+  text-underline-offset: 3px;
+}
+
 .site-footer {
   padding: 20px 16px 40px;
   color: var(--dim);
@@ -551,6 +600,10 @@ details[open] summary::after {
 
   .number-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .venue-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
