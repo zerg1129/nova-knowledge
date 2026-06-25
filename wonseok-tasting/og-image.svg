@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Wonseok Whisky Distillery tasting guide at Nova Whisky Bar</title>
+  <desc id="desc">A dark gray and gold social preview image for the Wonseok Whisky Distillery tasting guide.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f1f1f"/>
+      <stop offset="0.58" stop-color="#111111"/>
+      <stop offset="1" stop-color="#231f18"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="18%" r="70%">
+      <stop offset="0" stop-color="#c8b276" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#c8b276" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="64" y="64" width="1072" height="502" rx="28" fill="none" stroke="#3e3e3e" stroke-width="2"/>
+  <rect x="92" y="92" width="96" height="96" fill="#d8d4ca"/>
+  <text x="140" y="154" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" fill="#111111">W</text>
+  <text x="220" y="126" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="6" fill="#c8b276">NOVA WHISKY BAR</text>
+  <text x="92" y="285" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" fill="#f4f1eb">Wonseok Whisky</text>
+  <text x="92" y="365" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" fill="#f4f1eb">Distillery</text>
+  <text x="94" y="430" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" fill="#d8d4ca">Korean Single Malt Sample</text>
+  <text x="94" y="482" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#b9b4aa">Oloroso sherry hogshead · Gentle smoke · Dense texture</text>
+  <g transform="translate(880 402)">
+    <rect x="0" y="0" width="220" height="64" rx="32" fill="#c8b276" fill-opacity="0.14" stroke="#c8b276"/>
+    <text x="110" y="41" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#c8b276">TASTING GUIDE</text>
+  </g>
+</svg>
